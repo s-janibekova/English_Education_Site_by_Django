@@ -1,0 +1,23 @@
+
+{% extends "main/base.html" %}
+
+{% block content %}
+  <div class="row">
+  	{% for tut in tutorials %}
+    <div class="col s12 m6">
+      <div class="card white darken-2">
+        <div class="card-content text-darken-2">
+          <span class="card-title">{{tut.tutorial_title}}</span>
+		<p>{{tut.tutorial_content|safe}}</p>
+		<p style="font-size: 80%" >{{tut.tutorial_published}}</p>
+        </div>
+        <div class="card-action cyan lighten-5">
+         	<a class="blue-text text-darken-2" href="#home">This is a link
+         
+        </div>
+
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+{% endblock %}
